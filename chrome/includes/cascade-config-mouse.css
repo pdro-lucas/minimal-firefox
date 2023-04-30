@@ -164,3 +164,15 @@
 .tab-secondary-label {
   display: none !important;
 }
+
+/* Disable the Navigation Buttons */
+#back-button,
+#forward-button,
+#reload-button,
+#stop-button {
+  display: none !important;
+}
+
+#home-button {
+  margin-left: 6px !important;
+}

@@ -22,6 +22,26 @@
 }
 
 
+#urlbar[breakout] {
+  top: 5px !important;
+  left: 50% !important;
+  transform: translateX(-50%);
+  width: 90% !important;
+  border: 1px solid var(--arrowpanel-background) !important;
+  border-radius: 8px;
+}
+
+#urlbar[breakout][breakout-extend] {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 90% !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+  height: 32px !important;
+  padding-block: unset !important;
+}
+
 #urlbar-background { border: transparent !important; }
 
 #urlbar[focused='true']
@@ -31,7 +51,7 @@
 
 
 #urlbar[open]
-  > #urlbar-background { background: var(--toolbar-field-background-color) !important; }
+  > #urlbar-background { background: var(--toolbar-field-background-color) !important;}
 
 
 .urlbarView-row:hover

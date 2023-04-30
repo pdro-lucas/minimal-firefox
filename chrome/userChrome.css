@@ -33,9 +33,10 @@
 @import 'includes/cascade-responsive-windows-fix.css';
 @import 'includes/cascade-floating-panel.css';
 
-@import 'includes/cascade-nav-bar.css';
 @import 'includes/cascade-tabs.css';
 
 @import 'includes/tabcenter-reborn/cascade-tcr.css';
 
 @import 'includes/side-view/cascade-sideview.css';
+
+@import 'includes/cascade-nav-bar.css';
