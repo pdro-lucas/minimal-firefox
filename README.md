@@ -5,6 +5,20 @@ This theme is designed to give Firefox a more minimalist appearance, removing so
 > ⚠️ Warning!
 Useful elements such as the back, forward, and close tab buttons have been removed! If you don't prefer keyboard-centric navigation, this theme may not be suitable for you.
 
+## Preview
+![Tailwindcss Docs](https://github.com/pdro-lucas/my-firefox-customization/blob/main/images/preview1.png)
+> _Tailwindcss Documentation_
+
+![Tailwindcss Docs](https://github.com/pdro-lucas/my-firefox-customization/blob/main/images/preview1.1.png)
+> _Tailwindcss Documentation - Sidebar Open_
+
+![Tailwindcss Docs](https://github.com/pdro-lucas/my-firefox-customization/blob/main/images/preview2.png)
+> _Linear Website_
+
+![Tailwindcss Docs](https://github.com/pdro-lucas/my-firefox-customization/blob/main/images/preview3.png)
+> _Netflix Website_
+
+
 ## How to install
 To install this theme, you need to enable some browser settings:
 - Type `about:config` into your URL bar
