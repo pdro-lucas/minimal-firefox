@@ -80,6 +80,8 @@ body:hover #tablist-wrapper .tab-title-wrapper {
 
 .tab { overflow: visible; }
 
+#pinnedtablist.compact:not(:empty) { padding-left: 6px; }
+
 #pinnedtablist:not(.compact) .tab[data-identity-color] .tab-context::before,
 #tablist .tab[data-identity-color] .tab-context::before {
   position: absolute;
