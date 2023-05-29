@@ -49,41 +49,59 @@ To configure the extension, follow the steps below:
 - Paste the following CSS code into `Advanced -> Custom Stylesheet` and click on `Save CSS`
 
 ```css
-#topmenu { display: none !important; }
+#topmenu {
+  border-bottom: 1px solid var(--tab-active-background) !important;
+  padding: 4px 4px 4px 10px;
+  margin-bottom: 10px;
+}
 
 #tablist-wrapper,
-#pinnedtablist { background: var(--uc-base-colour); }
+#pinnedtablist { background: var(--uc-base-colour);}
 
 .tab:hover,
 .tab.active { background: var(--uc-highlight-colour); }
 
-#tablist-wrapper .tab-title-wrapper {
+
+
+#tablist-wrapper .tab-title-wrapper, #filterbox-icon, #filterbox-input {
   opacity: 0;
   transform: translateX(-10px);
 
   transition: all 200ms ease;
   transition-delay: 0ms;
+
 }
 
-body:hover #tablist-wrapper .tab-title-wrapper {
+#filterbox-input { width: 100%; border-radius: 6px !important; }
+
+
+body:hover #tablist-wrapper .tab-title-wrapper, body:hover #filterbox-input {
   opacity: 1;
   transform: translateX(0);
 
   transition-delay: 50ms;
+
 }
+
+#settings { display: none; }
 
 .tab,
 .tab.active { border-bottom: none !important; }
 
-#pinnedtablist:not(.compact) .tab { padding: 6px; }
+#pinnedtablist.compact:not(:empty) { padding-left: 6px; }
+
+#pinnedtablist:not(.compact) .tab { padding: 8px; }
 #tablist .tab { padding: 0 0 0 6px; }
+
+
 
 .tab { overflow: visible; }
 
-#pinnedtablist.compact:not(:empty) { padding-left: 6px; }
+
 
 #pinnedtablist:not(.compact) .tab[data-identity-color] .tab-context::before,
 #tablist .tab[data-identity-color] .tab-context::before {
+
   position: absolute;
   top: 4px; bottom: 4px;
 
@@ -92,9 +110,11 @@ body:hover #tablist-wrapper .tab-title-wrapper {
   background: var(--identity-color);
 
   content: '';
+
 }
 
 #tablist .tab[data-identity-color] .tab-context::before { left: -3px; }
+
 
 #pinnedtablist:not(.compact) .tab .tab-pin,
 .tab-close,
@@ -115,6 +135,9 @@ body:hover #tablist-wrapper .tab-title-wrapper {
 .can-scroll-bottom #tablist { mask: linear-gradient(var(--uc-shadow-colour) calc(100% - 40px), transparent); }
 .can-scroll-bottom.can-scroll-top #tablist { mask: linear-gradient(transparent, var(--uc-shadow-colour) 40px calc(100% - 40px), transparent); }
 #topshadow, #bottomshadow { display: none; }
+#main-window[titlepreface^="[1] "] #sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"] {
+  visibility: collapse;
+}
 ```
 
 ## Todo
