@@ -59,11 +59,14 @@ To configure the extension, follow the steps below:
 #pinnedtablist { background: var(--uc-base-colour);}
 
 .tab:hover,
-.tab.active { background: var(--uc-highlight-colour); }
+.tab.active { background: var(--uc-highlight-colour);}
 
 
+.tab:hover {
+  transform: scale(1.05);
+}
 
-#tablist-wrapper .tab-title-wrapper, #filterbox-icon, #filterbox-input {
+#tablist-wrapper .tab-title-wrapper,#filterbox-icon, #filterbox-input {
   opacity: 0;
   transform: translateX(-10px);
 
@@ -73,9 +76,9 @@ To configure the extension, follow the steps below:
 }
 
 #filterbox-input { width: 100%; border-radius: 6px !important; }
+#filterbox-icon { z-index: 100; }
 
-
-body:hover #tablist-wrapper .tab-title-wrapper, body:hover #filterbox-input {
+body:hover #tablist-wrapper .tab-title-wrapper, body:hover #filterbox-icon, body:hover #filterbox-input {
   opacity: 1;
   transform: translateX(0);
 
@@ -88,14 +91,18 @@ body:hover #tablist-wrapper .tab-title-wrapper, body:hover #filterbox-input {
 .tab,
 .tab.active { border-bottom: none !important; }
 
+.tab.active { background: var(--input-background) !important; width: 16% !important }
+
+body:hover .tab.active{ width: 95% !important; }
+
 #pinnedtablist.compact:not(:empty) { padding-left: 6px; }
 
 #pinnedtablist:not(.compact) .tab { padding: 8px; }
-#tablist .tab { padding: 0 0 0 6px; }
+#tablist .tab { width: 90%; margin-left: 5px; border-radius: 6px}
 
 
 
-.tab { overflow: visible; }
+.tab { overflow: visible; transition: all 0.1s cubic-bezier(.79,.14,.15,.86) !important;}
 
 
 
@@ -113,8 +120,10 @@ body:hover #tablist-wrapper .tab-title-wrapper, body:hover #filterbox-input {
 
 }
 
+#tablist { gap: 2px; }
 #tablist .tab[data-identity-color] .tab-context::before { left: -3px; }
 
+.tab-icon { width: 14px; }
 
 #pinnedtablist:not(.compact) .tab .tab-pin,
 .tab-close,
